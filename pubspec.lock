@@ -116,6 +116,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "4.0.1"
+  intl:
+    dependency: transitive
+    description:
+      name: intl
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.17.0"
   lints:
     dependency: transitive
     description:
@@ -221,6 +228,15 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "4.2.4"
+  reusables:
+    dependency: "direct main"
+    description:
+      path: "."
+      ref: HEAD
+      resolved-ref: "87cb449468f23dc64762a9363b29ca4ae3bb8f55"
+      url: "https://github.com/SparkoSol/reusables.git"
+    source: git
+    version: "1.0.1"
   sky_engine:
     dependency: transitive
     description: flutter

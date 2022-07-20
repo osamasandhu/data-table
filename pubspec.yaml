@@ -30,6 +30,9 @@ dependencies:
   flutter:
     sdk: flutter
   google_fonts:
+  reusables:
+    git:
+      url: https://github.com/SparkoSol/reusables.git
 
 
   # The following adds the Cupertino Icons font to your application.
