@@ -88,7 +88,7 @@ class _DataTablePageState extends State<DataTablePage>
               child: Row(
                 children: [
                   Text(
-                    '${valueController.dataFrom} - ${widget.controller.dataTo}  of 100',
+                    '${valueController.dataRowFrom} - ${widget.controller.dataRowTo}  of 100',
                     style: const TextStyle(
                       fontSize: 16,
                     ),
