@@ -43,7 +43,7 @@ class _DataTablePageState extends State<DataTablePage> {
                   return Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      _buildData(title: tableData[i].name),
+                      _buildData(title: tableData[i].name,),
                       _buildData(title: tableData[i].phone),
                       _buildData(
                         title: tableData[i].age,
@@ -123,13 +123,13 @@ class _DataTablePageState extends State<DataTablePage> {
       flex: flex ?? 1,
       child: Padding(
         padding: EdgeInsets.only(
-          right: right ?? 15,
+          right: right ?? 20,
         ),
         child: Text(
           title,
           style: GoogleFonts.abel(
             fontWeight: FontWeight.bold,
-            fontSize: 20,
+            fontSize: 18,
           ),
         ),
       ),
@@ -141,13 +141,13 @@ class _DataTablePageState extends State<DataTablePage> {
       flex: flex ?? 1,
       child: Padding(
         padding: EdgeInsets.only(
-          right: right ?? 15,
+          right: right ?? 20,
         ),
         child: Text(
           title,
           style: GoogleFonts.abel(
             fontWeight: FontWeight.w400,
-            fontSize: 16,
+            fontSize: 14,
           ),
         ),
       ),
