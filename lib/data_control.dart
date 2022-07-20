@@ -7,30 +7,20 @@ class ValueController extends ChangeNotifier {
   int dataTo = 10;
 
   increment() {
-    if (pageNumber < 10) {
+    if (pageNumber < 10 && dataTo < 100 && dataFrom < 90) {
       pageNumber++;
-    }
-    if (dataTo < 100) {
-      dataTo = dataTo + 10;
-    }
-    if (dataFrom < 90) {
       dataFrom = dataFrom + 10;
+      dataTo = dataTo + 10;
+      notifyListeners();
     }
-    notifyListeners();
   }
 
   decrement() {
-    if (pageNumber > 1) {
+    if (pageNumber > 1 && dataTo > 10 && dataFrom > 1) {
       pageNumber--;
-    }
-    if (dataTo > 10) {
       dataTo = dataTo - 10;
-    }
-    if (dataFrom > 1) {
       dataFrom = dataFrom - 10;
+      notifyListeners();
     }
-    notifyListeners();
-
   }
-
 }
