@@ -34,7 +34,36 @@ class _DataTablePageState extends State<DataTablePage> {
               ),
               child: _buildTableTitleRow(),
             ),
-
+            Container(
+              padding: const EdgeInsets.symmetric(
+                vertical: 10,
+                horizontal: 20,
+              ),
+              decoration: const BoxDecoration(
+                color: Colors.grey,
+                borderRadius: BorderRadius.only(
+                  bottomRight: Radius.circular(20),
+                  bottomLeft: Radius.circular(20),
+                ),
+              ),
+              child: Row(
+                children: const [
+                  Text(
+                    '1 - 8  of 100',
+                    style: TextStyle(
+                      fontSize: 16,
+                    ),
+                  ),
+                  Spacer(),
+                  Text(
+                    '< 1 >',
+                    style: TextStyle(
+                      fontSize: 16,
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
