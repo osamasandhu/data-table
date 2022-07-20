@@ -1,3 +1,4 @@
+import 'package:custom_data_table/data_model.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -33,6 +34,34 @@ class _DataTablePageState extends State<DataTablePage> {
                 ),
               ),
               child: _buildTableTitleRow(),
+            ),
+            Expanded(
+              child: ListView.separated(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+                itemBuilder: (c, i) {
+                  return Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      _buildData(title: tableData[i].name),
+                      _buildData(title: tableData[i].phone),
+                      _buildData(
+                        title: tableData[i].age,
+                      ),
+                      _buildData(title: tableData[i].email, flex: 2),
+                      _buildData(
+                        title: tableData[i].address,
+                        flex: 3,
+                        right: 0,
+                      ),
+                    ],
+                  );
+                },
+                separatorBuilder: (c, j) {
+                  return const SizedBox(height: 20);
+                },
+                itemCount: tableData.length,
+              ),
             ),
             Container(
               padding: const EdgeInsets.symmetric(
@@ -74,9 +103,15 @@ class _DataTablePageState extends State<DataTablePage> {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        _buildTitleTable(title: 'Name',),
-        _buildTitleTable(title: 'Phone',),
-        _buildTitleTable(title: 'Age',),
+        _buildTitleTable(
+          title: 'Name',
+        ),
+        _buildTitleTable(
+          title: 'Phone',
+        ),
+        _buildTitleTable(
+          title: 'Age',
+        ),
         _buildTitleTable(title: 'Email', flex: 2),
         _buildTitleTable(title: 'Address', flex: 3, right: 0),
       ],
@@ -118,5 +153,4 @@ class _DataTablePageState extends State<DataTablePage> {
       ),
     );
   }
-
 }
